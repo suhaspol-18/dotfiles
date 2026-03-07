@@ -13,7 +13,7 @@ return {
         -- Optional: keymaps for quick insertion
         vim.keymap.set(
             "n",
-            "<leader>ll",
+            "<leader>lle",
             ":LoremIpsum paragraphs 1<CR>",
             { desc = "🧩 Insert Lorem Ipsum Paragraphs" }
         )
