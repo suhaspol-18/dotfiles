@@ -17,6 +17,9 @@ fuzzel
 starship
 powerlevel 10k
 lazygit
+gh
+gh extensions: dash
+
 
 tmux 
 sesh(tmux sessionizer):  https://github.com/joshmedeski/sesh
@@ -36,5 +39,6 @@ ssh - Remote access
 ufw - Firewall
 
 yay -S vicinae-bin
+yay -S deleta           - Syntax highlighting pager for git
 yay -S yt-x-git
 curl https://mise.run | sh
