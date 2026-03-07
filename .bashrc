@@ -152,3 +152,4 @@ eval "$(atuin init bash)"
 alias seshl="~/sesh-highlight.sh"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
+

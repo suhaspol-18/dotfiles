@@ -205,3 +205,4 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 eval "$(/home/onkar/.local/bin/mise activate zsh)"
 alias ghostty='LIBGL_ALWAYS_SOFTWARE=1 ghostty'
+export PATH=$HOME/bin:$PATH
