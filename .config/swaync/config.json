@@ -1,11 +1,11 @@
 {
   "$schema": "/etc/xdg/swaync/configSchema.json",
   "positionX": "right",
-  "positionY": "top",
+  "positionY": "up",
   "layer": "overlay",
   "control-center-layer": "top",
   "layer-shell": true,
-  "cssPriority": "application",
+  "cssPriority": "user",
   "control-center-margin-top": 10,
   "control-center-margin-bottom": 100,
   "control-center-margin-right": 20,
@@ -30,10 +30,13 @@
   "script-fail-notify": true,
   "scripts": {},
   "notification-visibility": {
-    "example-name": {
-      "state": "muted",
-      "urgency": "Low",
-      "app-name": "Spotify"
+    "volume": {
+      "state": "transient",
+      "app-name": "Volume"
+    },
+    "brightness": {
+      "state": "transient",
+      "app-name": "Brightness"
     }
   },
   "widgets": [

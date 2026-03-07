@@ -221,49 +221,41 @@ scrollbar trough {
 }
 
 /* mpris */
-.widget-mpris-player {
-  background: #313244 !important;
-  border-radius: 12.6px;
-  color: #cdd6f4;
-  padding: 10px;
+.widget-mpris {
+  background-image: none;
 }
 
-.widget-mpris-player > image {
-  visibility: hidden;
-  opacity: 0;
-  display: none;
+.widget-mpris-player {
+  background: transparent;
+  border-radius: 12.6px;
+  color: #ffffff;
 }
 
 .mpris-overlay {
-  background: none !important;
+  background-color: rgba(47, 51, 77, 0.9);
   opacity: 1;
   padding: 15px 10px;
 }
 
 .widget-mpris-album-art {
-  -gtk-icon-size: 96px;
-  border-radius: 12px;
-  margin: 10px;
+  -gtk-icon-size: 100px;
+  border-radius: 12.6px;
+  margin: 0 10px;
 }
 
 .widget-mpris-title {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #1e1e2e;
-  margin: 5px 10px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+  color: #ffffff;
 }
 
 .widget-mpris-subtitle {
-  font-size: 0.9rem;
-  color: #1e1e2e;
-  margin: 0 10px 5px 10px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  color: #ffffff;
 }
 
 .widget-mpris button {
   border-radius: 12.6px;
-  color: #cdd6f4;
+  color: #ffffff;
   margin: 0 5px;
   padding: 2px;
 }
@@ -273,11 +265,11 @@ scrollbar trough {
 }
 
 .widget-mpris button:hover {
-  background-color: #313244;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .widget-mpris button:active {
-  background-color: #45475a;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .widget-mpris button:disabled {
