@@ -7,6 +7,13 @@ return {
             options = {
                 show_buffer_close_icons = false,
                 numbers = "ordinal",
+                custom_filter = function(buf_number)
+                    local buftype = vim.api.nvim_buf_get_option(buf_number, "buftype")
+                    if buftype == "nofile" then
+                        return false
+                    end
+                    return true
+                end,
             },
         })
 
