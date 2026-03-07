@@ -234,6 +234,60 @@ return {
         local servers = {
             bashls = {},
             marksman = {},
+            jdtls = {
+                cmd = {
+                    vim.fn.expand("~/.local/share/nvim/mason/bin/jdtls"),
+                    "--java-executable=/usr/lib/jvm/java-25-openjdk/bin/java",
+                },
+                root_dir = function(fname)
+                    local util = require("lspconfig.util")
+                    return util.root_pattern(".git", "pom.xml", "build.gradle", "mvnw", "gradlew")(fname)
+                        or util.find_git_ancestor(fname)
+                        or vim.fn.getcwd()
+                end,
+                single_file_support = true,
+                settings = {
+                    java = {
+                        signatureHelp = { enabled = true },
+                        contentProvider = { preferred = 'fernflower' },
+                        completion = {
+                            favoriteStaticMembers = {
+                                "org.junit.Assert.*",
+                                "org.junit.jupiter.api.Assertions.*",
+                                "org.junit.jupiter.api.Assumptions.*",
+                            },
+                            filteredTypes = {
+                                "com.sun.*",
+                                "io.micrometer.shaded.*",
+                                "java.awt.*",
+                                "jdk.*",
+                                "sun.*",
+                            },
+                        },
+                        sources = {
+                            organizeImports = {
+                                starThreshold = 9999,
+                                staticStarThreshold = 9999,
+                            },
+                        },
+                        codeGeneration = {
+                            toString = {
+                                template = "${object.className}{${member.name()}=${member.value}, ${otherMembers}}"
+                            },
+                            useBlocks = true,
+                        },
+                        configuration = {
+                            runtimes = {
+                                {
+                                    name = "JavaSE-25",
+                                    path = "/usr/lib/jvm/java-25-openjdk",
+                                    default = true,
+                                },
+                            }
+                        },
+                    },
+                },
+            },
             -- clangd = {},
             -- gopls = {},
             -- pyright = {},
