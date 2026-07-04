@@ -32,6 +32,9 @@ setopt HIST_SAVE_NO_DUPS     # Don't save duplicates in history file
 setopt HIST_IGNORE_ALL_DUPS  # Don't store a command if it's a duplicate of the previous one
 setopt HIST_FIND_NO_DUPS     # Don't show duplicates during history search
 
+# Enable zsh completion system
+autoload -Uz compinit
+compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zcompdump-${HOST%%.*}-${ZSH_VERSION}" -i
 
 # Make tab-completion case-insensitive (A = a, Z = z)
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -89,6 +92,8 @@ eval "$(starship init zsh)"
 zinit light Aloxaf/fzf-tab
 
 # ----------------Aliases------------------------------------
+alias installme='/home/onkar/dev/signvision/backend/.venv/bin/pip'
+alias runme='/home/onkar/dev/signvision/backend/.venv/bin/python'
 alias newenv='python3 -m venv .venv && source .venv/bin/activate'
 alias t='tree'
 alias vim='nvim'
@@ -145,10 +150,8 @@ bindkey '^x^e' edit-command-line
 # ----------- type file name and edit it ---------------
 alias -s java='neovim'
  
-# -----------   ---------------
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+# fnm - Fast Node Manager
+eval "$(fnm env)"
 export PATH="$HOME/.local/bin:$PATH"
 PATH="/usr/sbin:$PATH"
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
@@ -187,7 +190,7 @@ source ~/.zsh_functions
 export PNPM_HOME="/home/onkar/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+  *) export PATH="$PATH:$PNPM_HOME" ;;
 esac
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -204,5 +207,16 @@ export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 eval "$(/home/onkar/.local/bin/mise activate zsh)"
+# Keep npm-global binaries ahead of pnpm shims (fixes stale `codex` being selected).
+export PATH="$HOME/.local/bin:$PATH"
+# Normalize PATH order deterministically for each shell.
+typeset -U path PATH
+path=("$HOME/.local/bin" ${path:#$HOME/.local/bin})
+path=(${path:#$PNPM_HOME} "$PNPM_HOME")
 alias ghostty='LIBGL_ALWAYS_SOFTWARE=1 ghostty'
 export PATH=$HOME/bin:$PATH
+export EDITOR=vim
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/onkar/.local/bin:$PATH"

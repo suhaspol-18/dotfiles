@@ -7,6 +7,9 @@ waybar
 fuzzel
 mpv
 
+git-delta
+diffnav(AUR)
+
 hyprlock
 Neovim
 vim

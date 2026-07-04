@@ -154,10 +154,10 @@ normal.family = "GeistMono Nerd Font"
 normal.style = "normal"
 
 [window]
-blur = false
+blur = true
 decorations = "full"
 dynamic_title = true
-opacity = 0.7
+opacity = 0.8
 title = "Terminal"
 
 [window.dimensions]

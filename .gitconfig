@@ -15,3 +15,11 @@
 	gpgSign = false
 [gpg]
 	program = gpg
+[core]
+	pager = delta --side-by-side
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+[merge]
+	conflictStyle = zdiff3

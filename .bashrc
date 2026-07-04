@@ -153,3 +153,7 @@ alias seshl="~/sesh-highlight.sh"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
 
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/onkar/.local/bin:$PATH"

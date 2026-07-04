@@ -202,10 +202,10 @@ animations {
 # windowrule = match:float false, match:workspace f[1], rounding 0
 
 # See https://wiki.hypr.land/Configuring/Dwindle-Layout/ for more
-# dwindle {
-#     pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-#     preserve_split = true # You probably want this
-# }
+dwindle {
+    pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+    preserve_split = true # You probably want this
+}
 
 # See https://wiki.hypr.land/Configuring/Master-Layout/ for more
 master {
@@ -259,7 +259,7 @@ $WINKEY = SUPER
 
 # Clipboard manager
 
-bind = $mainMod, C, exec, vicinae vicinae://launch/clipboard/history
+bind = $mainMod, C, exec, vicinae vicinae://extensions/vicinae/clipboard/history
 # Backup Wofi
 # Bind = $mainMod, c, exec, cliphist list | wofi --dmenu --style /home/onkar/.config/wofi/style.css | cliphist decode | wl-copy
 
@@ -282,9 +282,9 @@ bind = $mainMod, P, pseudo, # dwindle
 # bind = $mainMod, J, togglesplit, # dwindle
 
 #vicinae bind
-bind = $mainMod, Space, exec, vicinae vicinae://launch/wm/switch-windows
+bind = $mainMod, Space, exec, vicinae vicinae://extensions/vicinae/wm/switch-windows
 
-bind = $mainMod, W, exec, vicinae vicinae://launch/window/selector
+bind = $mainMod, W, exec, vicinae vicinae://extensions/vicinae/window/selector
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, left, movefocus, l

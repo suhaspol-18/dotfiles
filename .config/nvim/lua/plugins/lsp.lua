@@ -237,7 +237,7 @@ return {
             jdtls = {
                 cmd = {
                     vim.fn.expand("~/.local/share/nvim/mason/bin/jdtls"),
-                    "--java-executable=/usr/lib/jvm/java-25-openjdk/bin/java",
+                    "--java-executable=/usr/lib/jvm/java-26-openjdk/bin/java",
                 },
                 root_dir = function(fname)
                     local util = require("lspconfig.util")
@@ -279,8 +279,8 @@ return {
                         configuration = {
                             runtimes = {
                                 {
-                                    name = "JavaSE-25",
-                                    path = "/usr/lib/jvm/java-25-openjdk",
+                                    name = "JavaSE-26",
+                                    path = "/usr/lib/jvm/java-26-openjdk",
                                     default = true,
                                 },
                             }

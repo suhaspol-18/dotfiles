@@ -408,7 +408,21 @@
       "transition-duration": 600,
       "children-class": "tray-group-item"
     },
-    "modules": ["custom/expand-icon", "custom/copilot", "temperature", "custom/leetcode-timer","custom/wifi"],
+    "modules": ["custom/expand-icon", "custom/copilot", "temperature", "custom/leetcode-timer", "custom/wifi", "bluetooth"],
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": "",
+    "format-off": " off",
+    "format-on": " on",
+    "format-connected": " {num_connections}",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager",
+    "on-click-right": "bash -lc 'if bluetoothctl show | grep -q \"Powered: yes\"; then bluetoothctl power off; else bluetoothctl power on; fi'",
+    "on-click-middle": "blueman-applet",
+    "interval": 5
   },
   "custom/expand-icon": {
     "format": " ",
