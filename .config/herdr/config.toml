@@ -3,3 +3,9 @@ onboarding = false
 [theme]
 name = "terminal"
 auto_switch = false
+
+[ui.toast]
+delivery = "system"
+
+[ui]
+show_agent_labels_on_pane_borders = true

@@ -11,3 +11,16 @@
 2026-07-04T17:30:08.568401Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=43062
 2026-07-04T17:30:08.571025Z  INFO herdr::client: connecting to server path=/home/onkar/.config/herdr/herdr-client.sock
 2026-07-04T17:30:08.599836Z  INFO herdr::client: handshake succeeded version=14 encoding=SemanticFrame
+2026-07-05T06:07:46.040434Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=43211
+2026-07-05T06:07:46.044824Z  INFO herdr::client: connecting to server path=/home/onkar/.config/herdr/herdr-client.sock
+2026-07-05T06:07:46.085090Z  INFO herdr::client: handshake succeeded version=14 encoding=SemanticFrame
+2026-07-05T06:17:15.243538Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=66885
+2026-07-05T06:17:15.243933Z  INFO herdr::client: connecting to server path=/home/onkar/.config/herdr/herdr-client.sock
+2026-07-05T06:17:15.387468Z  INFO herdr::client: handshake succeeded version=14 encoding=SemanticFrame
+2026-07-05T06:39:05.222491Z  WARN herdr::raw_input: flushing lone escape after input timeout; if this follows an alt chord or focus switch it may reach the pane as plain esc bytes=[27]
+2026-07-05T06:39:05.223122Z  WARN herdr::raw_input: flushing lone escape after input timeout; if this follows an alt chord or focus switch it may reach the pane as plain esc bytes=[27]
+2026-07-05T06:50:34.999310Z  WARN herdr::raw_input: flushing lone escape after input timeout; if this follows an alt chord or focus switch it may reach the pane as plain esc bytes=[27]
+2026-07-05T06:50:35.000557Z  WARN herdr::raw_input: flushing lone escape after input timeout; if this follows an alt chord or focus switch it may reach the pane as plain esc bytes=[27]
+2026-07-05T18:59:16.972838Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=30414
+2026-07-05T18:59:16.976638Z  INFO herdr::client: connecting to server path=/home/onkar/.config/herdr/herdr-client.sock
+2026-07-05T18:59:17.003182Z  INFO herdr::client: handshake succeeded version=14 encoding=SemanticFrame
